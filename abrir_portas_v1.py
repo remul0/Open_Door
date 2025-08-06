@@ -6,10 +6,7 @@ import os
 from dotenv import load_dotenv
 import json
 
-# Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
-
-# Inicializa o colorama para suportar o uso de cores no terminal
 init(autoreset=True)
 
 # Função para abrir a porta
@@ -26,12 +23,11 @@ def abrir_porta(ip, usuario, senha, nome_porta, user_id=1, tipo='Remote'):
 usuario = os.getenv('USUARIO_DISPOSITIVO')
 senha = os.getenv('SENHA_DISPOSITIVO')
 
-# Lê o dicionário de portas do novo arquivo JSON
+# Lê o dicionário de portas do arquivo JSON
 with open('portas.json', 'r', encoding='utf-8') as f:
     portas_data = json.load(f)
 portas = {k: v for k, v in portas_data.items()}
 
-# Função para exibir o menu com opções centralizadas
 def exibir_menu():
     print(Fore.YELLOW + "=" * 60)
     print(Fore.CYAN + "Escolha uma porta para abrir?".center(60))
