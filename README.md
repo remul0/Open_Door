@@ -46,18 +46,18 @@ python app.py
 Abra seu navegador e acesse a URL: http://127.0.0.1:5000/.
 
 Estrutura do Projeto
-open_door/
-    static/
-    aurora.ico
-    logo.png
-templates/
-    index.html
-.env (Ignorado pelo Git)
-.gitignore
-app.py
-portas.json (Ignorado pelo Git)
-README.md
 
+open_door/
+├── static/
+│   ├── aurora.ico
+│   └── logo.png
+├── templates/
+│   └── index.html
+├── .env
+├── .gitignore
+├── app.py
+├── portas.json
+└── README.md
 
 Contribuições
 Sinta-se à vontade para abrir uma issue ou enviar um pull request.
