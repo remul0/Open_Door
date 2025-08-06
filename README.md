@@ -1,24 +1,26 @@
-Projeto Open Door
+# Projeto Open Door
 
-Este é um projeto de controle de portas via web, desenvolvido em Python com o framework Flask. Ele oferece uma interface simples e segura para abrir portas de dispositivos de rede.
+Este é um projeto de controle de portas via web, desenvolvido em Python com o framework **Flask**. Ele oferece uma interface segura e intuitiva para abrir portas de dispositivos de rede.
 
-Funcionalidades
-Interface Web: Uma interface web simples para selecionar e abrir portas usando leitor facial intelbras.
+---
 
-Controle de Dispositivos: O script se comunica com os dispositivos de rede usando requisições HTTP.
+### Funcionalidades
 
-Segurança: As informações de login e a lista de portas são armazenadas em arquivos de configuração locais e não são versionadas no Git.
+* **Interface Web:** Uma página simples e amigável para selecionar e abrir portas.
+* **Controle de Dispositivos:** O script se comunica com os dispositivos de rede usando requisições HTTP.
+* **Segurança:** Credenciais e dados de portas são armazenados em arquivos locais e **não são enviados para o Git**.
 
-Requisitos
-Para rodar este projeto, você precisa ter o Python 3.x e as seguintes bibliotecas instaladas:
+---
 
-Bash
+### Requisitos
 
+Para rodar o projeto, você precisa ter o **Python 3.x** e as seguintes bibliotecas instaladas.
+
+```bash
 pip install Flask requests python-dotenv
 Como Rodar o Projeto
-Configurar o Ambiente
-
-O projeto requer dois arquivos de configuração que não devem ser enviados ao Git. Crie-os na pasta principal do seu projeto (open_door):
+1. Configurar o Ambiente
+O projeto requer dois arquivos de configuração que devem ser criados localmente, pois não são enviados ao Git.
 
 .env: Crie este arquivo para armazenar suas credenciais.
 
@@ -26,7 +28,7 @@ Snippet de código
 
 USUARIO_DISPOSITIVO=seu_usuario
 SENHA_DISPOSITIVO=sua_senha_secreta
-portas.json: Crie este arquivo para listar as portas e seus IPs. Substitua os exemplos pelas suas informações reais.
+portas.json: Crie este arquivo para listar as portas e seus IPs.
 
 JSON
 
@@ -34,29 +36,37 @@ JSON
     "1": {"nome": "Nome da Porta 1", "ip": "192.168.1.1"},
     "2": {"nome": "Nome da Porta 2", "ip": "192.168.1.2"}
 }
-Iniciar o Servidor
-
-Abra o terminal na pasta do projeto e execute o seguinte comando:
+2. Iniciar o Servidor
+Abra o terminal na pasta do projeto e execute:
 
 Bash
 
 python app.py
-Acessar a Aplicação
-
+3. Acessar a Aplicação
 Abra seu navegador e acesse a URL: http://127.0.0.1:5000/.
 
 Estrutura do Projeto
 open_door/
-├── static/
-│   ├── logo.ico
-│   └── logo.png
-├── templates/
-│   └── index.html
-├── .env           <- Arquivo de credenciais (IGNORADO PELO GIT)
-├── .gitignore
-├── app.py         <- Lógica principal e servidor Flask
-├── portas.json    <- Lista de portas (IGNORADO PELO GIT)
-└── README.md
+
+static/
+
+aurora.ico
+
+logo.png
+
+templates/
+
+index.html
+
+.env (Ignorado pelo Git)
+
+.gitignore
+
+app.py
+
+portas.json (Ignorado pelo Git)
+
+README.md
 
 Contribuições
-Sinta-se à vontade para abrir uma issue para reportar bugs ou enviar um pull request para sugerir melhorias.
+Sinta-se à vontade para abrir uma issue ou enviar um pull request.

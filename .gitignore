@@ -1,15 +1,8 @@
-# Arquivos de ambiente
-.env
-
-# Arquivos de cache do Python
-__pycache__/
-
-# Arquivos de cache do VS Code
-.vscode/
-
-# Ambientes virtuais
-venv/
-
 # Arquivos de ambiente e dados sensíveis
 .env
 portas.json
+
+# Pastas de cache e de ambiente
+__pycache__/
+.vscode/
+venv/
