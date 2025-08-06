@@ -5,10 +5,7 @@ import os
 from dotenv import load_dotenv
 import json
 
-# Inicializa o colorama para suportar o uso de cores no terminal
 init(autoreset=True)
-
-# Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
 
 app = Flask(__name__)
